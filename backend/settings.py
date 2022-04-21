@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'whales',
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
+    'whales'
 ]
 
 MIDDLEWARE = [
@@ -83,7 +83,6 @@ DATABASES = {
         'NAME': 'whales',
         'HOST': '127.0.0.1',
         'PORT': 5432,
-
     }
 }
 
@@ -134,7 +133,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # 'http://localhost:3000',  # Our react app gets hosted on port `3000`
 # ]
 
-#CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_ALLOW_ALL = False
 CORS_ALLOWED_ORIGINS = (
     'http://localhost:3000',
 )

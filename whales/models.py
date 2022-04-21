@@ -4,11 +4,11 @@ from django.db import models
 
 
 class Whale(models.Model):  # inside the brackets is where its inheriting from
-    """Book is a child class of the Django `Model` class"""
+    """Whale is a child class of the Django `Model` class"""
 
     name = models.CharField(max_length=50)
     species_status = models.CharField(max_length=50)
-    life_expectancy = models.CharField(max_length=20)
+    lifespan = models.CharField(max_length=20)
     image = models.CharField(max_length=300)
     created = models.DateTimeField(auto_now_add=True)
 

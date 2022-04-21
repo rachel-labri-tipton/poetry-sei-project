@@ -1,9 +1,9 @@
 from django.urls import path
 
-from .views import WhaleDetailView, WhaleView
+from .views import WhaleDetailView, WhaleList
 
 
 urlpatterns = [
-    path('', WhaleView.as_view()),
-    path('<str:pk>/', WhaleDetailView.as_view())
+    path('', WhaleList.as_view()),
+    path('<int:pk>/', WhaleDetailView.as_view()),
 ]

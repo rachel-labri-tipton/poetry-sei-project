@@ -1,6 +1,6 @@
 
 from rest_framework import serializers
-from .models import Whale
+from whales.models import Whale
 
 
 class WhalesSerializer(serializers.ModelSerializer):

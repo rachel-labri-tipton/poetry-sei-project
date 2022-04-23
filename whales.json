@@ -28,5 +28,11 @@
     "species_status": "Endangered",
     "lifespan": "Unknown",
     "image": "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/303/original/c0274599-800px-wm.jpg?1650452793"
+  },
+  {
+    "name": "Minke Whale",
+    "species_status": "Endangered",
+    "lifespan": "50 years",
+    "image": "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/557/original/Minke-Whale.jpg?1650698501"
   }
 ]

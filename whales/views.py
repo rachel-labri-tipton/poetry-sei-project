@@ -1,8 +1,9 @@
 
 # # Create your views here.
 #from django.contrib.auth.models import User
-from rest_framework import generics
 
+from backend import permissions
+from rest_framework import generics
 
 from whales.models import Whale
 from .serializers import WhalesSerializer
@@ -18,6 +19,7 @@ class WhaleList(generics.ListCreateAPIView):
 
 
 class WhaleDetailView(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = (permissions.IsAuthorOrReadOnly,)
     queryset = Whale.objects.all()
     serializer_class = WhalesSerializer
 

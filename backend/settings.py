@@ -97,7 +97,7 @@ DATABASES = {
     #     'PORT': 5432,
     # }
     'default': dj_database_url.config(
-        default='postgres://@labrilocalhost/whales'
+        default='postgres://labri@localhost/whales'
     )
 }
 

@@ -14,6 +14,6 @@ class ThreatsView(generics.ListCreateAPIView):
 
 
 class ThreatDetailView(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = (permissions.IsReadOnly,)
+    # permission_classes = (permissions.IsReadOnly,)
     queryset = Threats.objects.all()
     serializer_class = ThreatsSerializer

@@ -1,7 +1,9 @@
 
 
-from environment.models import Environment
+
 from rest_framework import serializers
+
+from environment.models import Environment
 from threats.models import Threats
 from whales.models import Whale
 
@@ -10,8 +12,7 @@ class ThreatsSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Threats
-        fields = '__all__'
-
+        fields = ("threat",)
 
 class EnvironmentSerializer(serializers.ModelSerializer):
     class Meta:
@@ -34,15 +35,21 @@ class WhalesSerializer(serializers.ModelSerializer):
         model = Whale
         fields = '__all__'
 
-    # def create(self, data):
-    #     threat_data = data.pop("creator")
+    def create(self, data):
+        threat_data = data.pop("threat")
+        environment_data = data.pop("environment")
+        whale = Whale(**data)
 
-    #     whale = Whale(**data)
-    #     threat, _created = Threats.objects.get_or_create(**threat_data)
-    #     whale.threat = threat
-    #     whale.save()
-    #     # data doesn't have creator_data
-    #     return whale
+        if threat_data:
+            threat, _created
+
+#** is pass in the key and the data
+        whale = Whale(**data)
+        threat, _created = Threats.objects.get_or_create(**threat_data)
+        whale.threat = threat
+        whale.save()
+        # data doesn't have creator_data
+        return whale
 
     # def update(self, whale, data):
     #     threat_data = data.pop("threat")

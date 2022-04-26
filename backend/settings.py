@@ -150,3 +150,5 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.TokenAuthentication",
     ]
 }
+
+LOGIN_REDIRECT_URL = 'http//localhost:8000/whales/'
